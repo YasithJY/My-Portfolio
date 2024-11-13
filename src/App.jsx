@@ -1,18 +1,24 @@
 // src/App.js
 import React from 'react';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Background from './components/Background';
 
 function App() {
   return (
-    <div className="bg-gray-100 text-gray-800">
-      <Header />
-      <main className="p-6 md:p-12 lg:p-20">
+    <div className="relative">
+      <Background /> {/* Background component with animation */}
+      <Navbar />
+      <main className="mt-16">
+        <Hero />
         <About />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <Footer />
